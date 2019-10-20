@@ -9,9 +9,9 @@
 
 namespace virtualmemory
 {
-	namespace virtual
-	{
-		template <class val>
+namespace virtual
+{
+template <class val>
 std::vector<DWORD> ScanProcessMemory(HANDLE ProcessHandle, std::vector<val> Value ,bool space, DWORD minimum, DWORD maximum) {
 std::vector<DWORD>Locations; bool break = false; INT64 mem; if (!space) { mem = 0; } else { mem = minimum; }
 if (!space) {
