@@ -24,12 +24,12 @@ for (size_t i = 0; i < Buffer.size(); ++i) {
 for (auto f : Value) {
 if (Buffer[i] == f) {
 Locations.push_back(mem + ((i + 1) * sizeof(val)) - sizeof(val));
-}
-}
-}
+      }
+    }
+  }
 }
 } mem += mem.RegionSize;
-}
+  }
 }
 else {
 while (mem < maximum) {
@@ -39,16 +39,16 @@ for (size_t i = 0; i < Buffer.size(); ++i) {
 if (mem + ((i + 1) * sizeof(val)) - sizeof(val) > maximum) {
 breakop = true;
 break;
-}
+  }
 for (auto f : Value) {
 if (Buffer[i] == f) {
 Locations.push_back(mem + ((i + 1) * sizeof(val)) - sizeof(val));
-}
+  }
 } if (breakop) { break; }
-}
+  }
 } if (breakop) { break; } mem += MEMBLOCK;
-}
+  }
 }return Locations;
-}
-}
+    }
+  }
 }
