@@ -9,7 +9,7 @@
 
 namespace virtualmemory
 {
-    namespace virtual
+    namespace memoryScanner
     {
         template <class val>
         std::vector<DWORD> ScanProcessMemory(HANDLE ProcessHandle, std::vector<val> Value, bool space, DWORD minimum, DWORD maximum) {
